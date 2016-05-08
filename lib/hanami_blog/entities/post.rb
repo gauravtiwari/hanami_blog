@@ -1,4 +1,5 @@
-class Post
-  include Hanami::Entity
-  attributes :title, :body, :user_id
+class Post < Sequel::Model
+  many_to_one :user
+  one_to_many :comments
+  one_to_many :votes
 end

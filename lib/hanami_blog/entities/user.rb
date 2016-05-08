@@ -1,4 +1,4 @@
-class User
-  include Hanami::Entity
-  attributes :name, :email, :username, :password, :encrypted_password
+class User < Sequel::Model
+  one_to_many :posts
+  one_to_many :comments
 end

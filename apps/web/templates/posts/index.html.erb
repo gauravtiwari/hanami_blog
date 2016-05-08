@@ -1,1 +1,6 @@
 <h1>Index posts</h1>
+<% posts.each do |post| %>
+  <h1><%= post.title %></h1>
+  <p><%= post.body %></p>
+  <%= link_to 'Show', routes.post_path(id: post.id), class: 'btn', title: 'Your profile' %>
+<% end %>

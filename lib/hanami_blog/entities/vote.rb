@@ -1,4 +1,4 @@
-class Vote
-  include Hanami::Entity
-  attributes :post_id, :comment_id, :user_id
+class Vote < Sequel::Model
+  many_to_one :post
+  many_to_one :comment
 end

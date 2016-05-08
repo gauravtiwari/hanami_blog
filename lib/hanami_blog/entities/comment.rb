@@ -1,4 +1,4 @@
-class Comment
-  include Hanami::Entity
-  attributes :body, :user_id, :post_id
+class Comment < Sequel::Model
+  many_to_one :user
+  many_to_one :post
 end
