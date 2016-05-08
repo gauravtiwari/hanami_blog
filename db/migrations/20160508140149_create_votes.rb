@@ -1,4 +1,4 @@
-Hanami::Model.migration do
+Sequel.migration do
   change do
     create_table :votes do
       primary_key :id
